@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+    }
+    .pricing-container{
+      height:100vh;
+      display:flex;
+      gap:2rem;
+      justify-content:center;
+      align-items:center;
+    }
+    .pricing-container>*{
+      background-color: rgba(223, 255, 237, 0.977);
+      flex-basis: 300px;
+      text-align: center;
+    }
+    .plan-features{
+      list-style:none;
+      padding:0;
+    }
+    li{
+      margin:1rem;
+    }
+    .plan-title{
+       margin:1rem;
+       font-size:1.5rem;
+       font-weight:550;
+    }
+    .plan-price{
+      margin:1rem;
+       font-size:3rem;
+       font-weight:600;
+    }
+   .pricing-plan{
+    flex:1;
+    max-width:400px;
+    padding:1rem;
+    border-radius:5px;
+   }
+
+   .plan-button{
+  background: #fc4b63;
+  background-image: -webkit-linear-gradient(top, #fc4b63, #7a0b1e);
+  background-image: -moz-linear-gradient(top, #fc4b63, #7a0b1e);
+  background-image: -ms-linear-gradient(top, #fc4b63, #7a0b1e);
+  background-image: -o-linear-gradient(top, #fc4b63, #7a0b1e);
+  background-image: linear-gradient(to bottom, #fc4b63, #7a0b1e);
+  -webkit-border-radius: 13;
+  -moz-border-radius: 13;
+  border-radius: 13px;
+  text-shadow: 3px 2px 1px #666666;
+  -webkit-box-shadow: 3px 3px 2px #666666;
+  -moz-box-shadow: 3px 3px 2px #666666;
+  box-shadow: 3px 3px 2px #666666;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 19px;
+  padding: 10px 14px 10px 13px;
+  text-decoration: none;
+}
+
+.plan-button:hover {
+  background: #f2333a;
+  background-image: -webkit-linear-gradient(top, #f2333a, #e32b1d);
+  background-image: -moz-linear-gradient(top, #f2333a, #e32b1d);
+  background-image: -ms-linear-gradient(top, #f2333a, #e32b1d);
+  background-image: -o-linear-gradient(top, #f2333a, #e32b1d);
+  background-image: linear-gradient(to bottom, #f2333a, #e32b1d);
+  text-decoration: none;
+}
+
+   
+    @media (max-width: 1250px) {
+      .pricing-container{
+        flex-direction: column;
+        height:100%;  /*important as previousely height was 100vh.. so some of the content will be cutoff otherwise*/
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
